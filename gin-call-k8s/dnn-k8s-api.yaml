@@ -1,0 +1,104 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    name: dnn
+spec:
+    type: LoadBalancer
+    ports:
+      - port: 80
+        nodePort: 30999
+    selector:
+        app: dnn
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    app: dnn
+spec:
+  containers:
+  - name: dnn-k8s-api-server
+    image: 192.168.8.25:31115/golang-gin:v3.2
+    ports:
+    - containerPort: 80
+apiVersion: v1
+kind: Service
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    name: dnn
+spec:
+    type: LoadBalancer
+    ports:
+      - port: 80
+        nodePort: 30999
+    selector:
+        app: dnn
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    app: dnn
+spec:
+  containers:
+  - name: dnn-k8s-api-server
+    image: 192.168.8.25:31115/golang-gin:v3.3
+    ports:
+    - containerPort: 80
+apiVersion: v1
+kind: Service
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    name: dnn
+spec:
+    type: LoadBalancer
+    ports:
+      - port: 80
+        nodePort: 30999
+    selector:
+        app: dnn
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    app: dnn
+spec:
+  containers:
+  - name: dnn-k8s-api-server
+    image: 192.168.8.25:31115/golang-gin:v4.0
+    ports:
+    - containerPort: 80
+apiVersion: v1
+kind: Service
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    name: dnn
+spec:
+    type: LoadBalancer
+    ports:
+      - port: 80
+        nodePort: 30999
+    selector:
+        app: dnn
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dnn-k8s-api-server
+  labels:
+    app: dnn
+spec:
+  containers:
+  - name: dnn-k8s-api-server
+    image: 192.168.8.25:31115/golang-gin:v4.1
+    ports:
+    - containerPort: 80

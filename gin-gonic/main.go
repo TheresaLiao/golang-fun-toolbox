@@ -9,8 +9,9 @@ func main() {
 	fmt.Println("start api")
 	router := gin.Default()
 
-	// curl  http://localhost:80
+	// curl  http://localhost:80/
 	router.GET("/", test)
+	router.GET("/getJson", test)
 	router.Run(":80")
 }
 
